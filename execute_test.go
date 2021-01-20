@@ -11,7 +11,8 @@ func TestConditionallyExecute(t *testing.T){
 		executed = true
 		t.Log("onTrue executed")
 	}).Execute()
-	if executed != ce.condition{
+	for executed != ce.condition{
 		t.Errorf("Expected %v, got %v", ce.condition, executed)
+		break
 	}
 }

@@ -18,10 +18,10 @@ func (ce *conditionallyExecute) OnFalse(onFalseFunc func()) *conditionallyExecut
 	return ce
 }
 func (ce *conditionallyExecute) Execute() *conditionallyExecute{
-	if ce.condition{
+	for ce.condition{
 		ce.onTrue()
-	}else{
-		ce.onFalse()
+		return ce
 	}
+	ce.onFalse()
 	return ce
 }
